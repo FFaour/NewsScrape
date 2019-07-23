@@ -1,61 +1,37 @@
-body {
-  background-image: url("../images/papertexture.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 0.8125rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #444;
-}
-
-.btn-danger {
-  margin-right: 5px;
-  font-size: 0.8125rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  padding: 10px;
-  margin-top: 10px;
-  margin-left: 10px;
-  font-weight: 800;
-}
-
-.btn-danger:hover {
-  background-color: green;
-}
-
-.caption {
-  color: white;
-  text-align: center;
-  display: block;
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  z-index: 999999;
-}
-
-.header {
-  background-image: url("../images/NYTpaper.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 10%;
-  box-shadow: 10px 5px 20px 2px lightslategrey;
+html {
   position: relative;
-  height: 500px;
+  min-height: 100%;
 }
 
-.jumbotron .caption {
+body {
+  margin-bottom: 80px;
+  background-image: url("../images/paper.png");
+}
+
+.card a:not([href]):not([tabindex]).scrape-new {
+  color: #2196F3;
+}
+
+.footer {
   position: absolute;
-  top: 30%;
+  bottom: 0;
   width: 100%;
-  text-align: center;
+  height: 80px;
+  color: white;
+  background-color: #2196f3;
 }
 
-.jumbotron h1 {
-  font-size: 80px;
-  font-weight: 800;
+.navbar {
+  margin-bottom: 0;
 }
 
-.jumbotron p {
-  font-size: 30px;
+.jumbotron {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  font-family: "Cormorant SC";
+  box-shadow: 10px 5px 20px 2px lightslategrey;
 }
 
 .jumbotron .overlay {
@@ -69,15 +45,125 @@ body {
   opacity: 0.7;
 }
 
-.navbar {
-  padding: 1rem 1rem;
+.jumbotron .background-image {
+  height: 100%;
+  background-image: url("../images/newspaper.jpg");
+  background-size: cover;
 }
 
-.navbar-brand {
-  font-size: 24px;
-  font-weight: 400;
+.jumbotron .caption {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
 }
 
-.nav-item {
-  padding-top: 0.9rem;
+.jumbotron .caption h1,
+.jumbotron .caption p {
+  color: white;
+}
+
+.jumbotron h1 {
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.jumbotron p {
+  font-size: 30px;
+}
+
+.article-container {
+  padding-bottom: 25px;
+}
+
+.card {
+  border-radius: 0;
+  box-shadow: 3px 3px 20px lightslategrey;
+  margin: 20px 0;
+}
+
+.card .card-header {
+  background-color: #2196f3;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.card .card-header h3 {
+  color: white;
+}
+
+.card .card-header .btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.card .card-header .btn.delete {
+  right: 160px;
+}
+
+.card .card-body {
+  font-size: 16px;
+}
+
+.card .card-header .article-link {
+  color: white;
+  display: inline-block;
+  width: 80%;
+}
+
+.footer > .container > p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin: 0;
+  font-weight: 800;
+  background: #0c7cd5;
+}
+
+.navbar-nav > li > a.scrape-new,
+.navbar-nav > li > a.clear {
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: 800;
+  color: white;
+}
+
+.navbar-nav > li > a.scrape-new:hover,
+.navbar-nav > li > a.clear:hover {
+  background: #4caf50;
+}
+
+.navbar-nav > li > a.scrape-new:active {
+  background: #e51c23;
+}
+
+.scrape-new {
+  cursor: pointer;
+}
+
+.m-top-80 {
+  margin-top: 80px;
+}
+
+textarea {
+  padding: 10px;
+  resize: none;
+  width: 100%;
+}
+
+.bootbox-body .btn {
+  float: right;
+  margin: 5px;
+}
+
+.note.list-group-item .btn {
+  position: relative;
+  bottom: 10px;
 }
